@@ -17,6 +17,7 @@ using NzbDrone.Core.MediaFiles.MediaInfo;
 using NzbDrone.Core.Movies;
 using NzbDrone.Core.Movies.Credits;
 using NzbDrone.Core.Movies.Translations;
+using NzbDrone.Core.Tags;
 
 namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
 {
@@ -27,12 +28,14 @@ namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
         private readonly IDetectXbmcNfo _detectNfo;
         private readonly IDiskProvider _diskProvider;
         private readonly ICreditService _creditService;
+        private readonly ITagService _tagService;
         private readonly IMovieTranslationService _movieTranslationsService;
 
         public XbmcMetadata(IDetectXbmcNfo detectNfo,
                             IDiskProvider diskProvider,
                             IMapCoversToLocal mediaCoverService,
                             ICreditService creditService,
+                            ITagService tagService,
                             IMovieTranslationService movieTranslationsService,
                             Logger logger)
         {
@@ -41,6 +44,7 @@ namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
             _diskProvider = diskProvider;
             _detectNfo = detectNfo;
             _creditService = creditService;
+            _tagService = tagService;
             _movieTranslationsService = movieTranslationsService;
         }
 
@@ -244,9 +248,11 @@ namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
                         details.Add(setElement);
                     }
 
-                    foreach (var tag in movie.Tags)
+                    var tags = _tagService.GetTags(movie.Tags);
+
+                    foreach (var tag in tags)
                     {
-                        details.Add(new XElement("tag", tag));
+                        details.Add(new XElement("tag", tag.Label));
                     }
 
                     foreach (var credit in credits)
@@ -274,7 +280,7 @@ namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
 
                     details.Add(new XElement("studio", movie.Studio));
 
-                    details.Add(new XElement("trailer", "https://www.youtube.com/watch?v=" + movie.YouTubeTrailerId));
+                    details.Add(new XElement("trailer", "plugin://plugin.video.youtube/play/?video_id=" + movie.YouTubeTrailerId));
 
                     if (movieFile.MediaInfo != null)
                     {
@@ -292,7 +298,7 @@ namespace NzbDrone.Core.Extras.Metadata.Consumers.Xbmc
                         video.Add(new XElement("scantype", movieFile.MediaInfo.ScanType));
                         video.Add(new XElement("width", movieFile.MediaInfo.Width));
 
-                        if (movieFile.MediaInfo.RunTime != null)
+                        if (movieFile.MediaInfo.RunTime != default)
                         {
                             video.Add(new XElement("duration", movieFile.MediaInfo.RunTime.TotalMinutes));
                             video.Add(new XElement("durationinseconds", movieFile.MediaInfo.RunTime.TotalSeconds));

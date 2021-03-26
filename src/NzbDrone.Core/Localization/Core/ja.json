@@ -1059,5 +1059,22 @@
     "MovieExcludedFromAutomaticAdd": "自動追加から除外された映画",
     "ReleaseWillBeProcessedInterp": "リリースは処理されます{0}",
     "Search": "探す",
-    "Edit": "編集"
+    "Edit": "編集",
+    "SqliteVersionCheckUpgradeRequiredMessage": "現在インストールされているSQLiteバージョン{0}はサポートされなくなりました。 SQLiteを少なくともバージョン{1}にアップグレードしてください。",
+    "ShowCinemaRelease": "シネマのリリース日を表示",
+    "showCinemaReleaseHelpText": "ポスターの下に映画のリリース日を表示する",
+    "ShowReleaseDate": "リリース日を表示",
+    "ShowReleaseDateHelpText": "ポスターの下にリリース日を表示する",
+    "NoCinemaRelease": "シネマリリースなし",
+    "ReleaseDate": "リリース日",
+    "OnMovieFileDeleteHelpText": "ムービーファイルの削除について",
+    "OnMovieFileDeleteForUpgrade": "アップグレードのためのムービーファイルの削除",
+    "OnMovieFileDeleteForUpgradeHelpText": "アップグレードのためのムービーファイルの削除",
+    "OnUpgrade": "アップグレード時",
+    "OnMovieDelete": "映画の削除について",
+    "OnMovieDeleteHelpText": "映画の削除について",
+    "OnMovieFileDelete": "ムービーファイルの削除について",
+    "Reddit": "Reddit",
+    "More": "もっと",
+    "Download": "ダウンロード"
 }

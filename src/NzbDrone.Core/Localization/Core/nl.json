@@ -1075,5 +1075,22 @@
     "WouldYouLikeToRestoreBackup": "Wilt u de back-up {0} herstellen?",
     "Yes": "Ja",
     "YesMoveFiles": "Ja, verplaats de bestanden",
-    "Yesterday": "Gisteren"
+    "Yesterday": "Gisteren",
+    "SqliteVersionCheckUpgradeRequiredMessage": "De momenteel geïnstalleerde SQLite-versie {0} wordt niet langer ondersteund. Upgrade SQLite naar minimaal versie {1}.",
+    "NoCinemaRelease": "Geen bioscooprelease",
+    "ReleaseDate": "Uitgave Datums",
+    "ShowCinemaRelease": "Show Cinema-releasedatum",
+    "showCinemaReleaseHelpText": "Laat de releasedatum van de bioscoop zien onder poster",
+    "ShowReleaseDate": "Toon releasedatum",
+    "ShowReleaseDateHelpText": "Laat releasedatum zien onder poster",
+    "OnMovieDelete": "Op film verwijderen",
+    "OnMovieDeleteHelpText": "Op film verwijderen",
+    "OnMovieFileDelete": "Op filmbestand verwijderen",
+    "OnMovieFileDeleteHelpText": "Op filmbestand verwijderen",
+    "OnMovieFileDeleteForUpgrade": "Op filmbestand verwijderen voor upgrade",
+    "OnMovieFileDeleteForUpgradeHelpText": "Op filmbestand verwijderen voor upgrade",
+    "OnUpgrade": "Bij Opwaarderen",
+    "Reddit": "Reddit",
+    "More": "Meer",
+    "Download": "Downloaden"
 }

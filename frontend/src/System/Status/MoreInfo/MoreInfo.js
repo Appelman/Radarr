@@ -23,24 +23,24 @@ class MoreInfo extends Component {
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>
-            {translate('Discord')}
-          </DescriptionListItemTitle>
-          <DescriptionListItemDescription>
-            <Link to="https://discord.gg/r5wJPt9">discord.gg/r5wJPt9</Link>
-          </DescriptionListItemDescription>
-
-          <DescriptionListItemTitle>
             {translate('Wiki')}
           </DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://wiki.servarr.com/Radarr">wiki.servarr.com/Radarr</Link>
+            <Link to="https://wiki.servarr.com/Radarr">{translate('Wiki')}</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>
-            {translate('Donations')}
+            {translate('Reddit')}
           </DescriptionListItemTitle>
           <DescriptionListItemDescription>
-            <Link to="https://opencollective.com/radarr">opencollective.com/radarr</Link>
+            <Link to="https://www.reddit.com/r/Radarr/">/r/Radarr</Link>
+          </DescriptionListItemDescription>
+
+          <DescriptionListItemTitle>
+            {translate('Discord')}
+          </DescriptionListItemTitle>
+          <DescriptionListItemDescription>
+            <Link to="https://radarr.video/discord">radarr.video/discord</Link>
           </DescriptionListItemDescription>
 
           <DescriptionListItemTitle>

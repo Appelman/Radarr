@@ -13,6 +13,7 @@ namespace NzbDrone.Core.MediaFiles.MediaInfo
     public static class MediaInfoFormatter
     {
         private const string ValidHdrColourPrimaries = "BT.2020";
+        private const string VideoDynamicRangeHdr = "HDR";
         private static readonly string[] ValidHdrTransferFunctions = { "PQ", "HLG" };
 
         private static readonly Logger Logger = NzbDroneLogger.GetLogger(typeof(MediaInfoFormatter));
@@ -21,12 +22,12 @@ namespace NzbDrone.Core.MediaFiles.MediaInfo
         {
             var audioChannels = FormatAudioChannelsFromAudioChannelPositions(mediaInfo);
 
-            if (audioChannels == null)
+            if (audioChannels == null || audioChannels == 0.0m)
             {
                 audioChannels = FormatAudioChannelsFromAudioChannelPositionsText(mediaInfo);
             }
 
-            if (audioChannels == null)
+            if (audioChannels == null || audioChannels == 0.0m)
             {
                 audioChannels = FormatAudioChannelsFromAudioChannels(mediaInfo);
             }
@@ -565,6 +566,12 @@ namespace NzbDrone.Core.MediaFiles.MediaInfo
                 return audioChannelsContainer - 1 + 0.1m;
             }
 
+            // FLAC 6 channels is likely 5.1
+            if (audioFormat.ContainsIgnoreCase("FLAC") && audioChannelsContainer == 6)
+            {
+                return 5.1m;
+            }
+
             if (mediaInfo.SchemaRevision > 5)
             {
                 return audioChannelsStream > 0 ? audioChannelsStream : audioChannelsContainer;
@@ -596,8 +603,10 @@ namespace NzbDrone.Core.MediaFiles.MediaInfo
 
         public static string FormatVideoDynamicRange(MediaInfoModel mediaInfo)
         {
-            // assume SDR by default
-            var videoDynamicRange = "";
+            if (mediaInfo.VideoHdrFormat.IsNotNullOrWhiteSpace())
+            {
+                return VideoDynamicRangeHdr;
+            }
 
             if (mediaInfo.VideoBitDepth >= 10 &&
                 mediaInfo.VideoColourPrimaries.IsNotNullOrWhiteSpace() &&
@@ -606,11 +615,11 @@ namespace NzbDrone.Core.MediaFiles.MediaInfo
                 if (mediaInfo.VideoColourPrimaries.EqualsIgnoreCase(ValidHdrColourPrimaries) &&
                     ValidHdrTransferFunctions.Any(mediaInfo.VideoTransferCharacteristics.Contains))
                 {
-                    videoDynamicRange = "HDR";
+                    return VideoDynamicRangeHdr;
                 }
             }
 
-            return videoDynamicRange;
+            return "";
         }
     }
 }

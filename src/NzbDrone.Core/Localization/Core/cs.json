@@ -1059,5 +1059,22 @@
     "MovieExcludedFromAutomaticAdd": "Film je vyloučen z automatického přidání",
     "ReleaseWillBeProcessedInterp": "Vydání bude zpracováno {0}",
     "Search": "Vyhledávání",
-    "Edit": "Upravit"
+    "Edit": "Upravit",
+    "SqliteVersionCheckUpgradeRequiredMessage": "Aktuálně nainstalovaná verze SQLite {0} již není podporována. Upgradujte SQLite alespoň na verzi {1}.",
+    "ShowReleaseDate": "Zobrazit datum vydání",
+    "ShowReleaseDateHelpText": "Zobrazit datum vydání pod plakátem",
+    "NoCinemaRelease": "Žádné vydání kina",
+    "ReleaseDate": "Datum vydání",
+    "ShowCinemaRelease": "Zobrazit datum vydání kina",
+    "showCinemaReleaseHelpText": "Zobrazit datum vydání kina pod plakátem",
+    "OnMovieDelete": "Při mazání filmu",
+    "OnMovieDeleteHelpText": "Při mazání filmu",
+    "OnMovieFileDelete": "Při mazání filmových souborů",
+    "OnMovieFileDeleteHelpText": "Při mazání filmových souborů",
+    "OnMovieFileDeleteForUpgrade": "Na filmovém souboru Odstranit pro upgrade",
+    "OnMovieFileDeleteForUpgradeHelpText": "Na filmovém souboru Odstranit pro upgrade",
+    "OnUpgrade": "Při upgradu",
+    "Reddit": "Reddit",
+    "More": "Více",
+    "Download": "Stažení"
 }

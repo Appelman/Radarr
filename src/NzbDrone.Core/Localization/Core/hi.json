@@ -1059,5 +1059,22 @@
     "MovieDetailsPreviousMovie": "मूवी का विवरण: पिछला मूवी",
     "MovieEditor": "मूवी एडिटर",
     "ReleaseWillBeProcessedInterp": "रिलीज़ को संसाधित किया जाएगा {0}",
-    "Edit": "संपादित करें"
+    "Edit": "संपादित करें",
+    "SqliteVersionCheckUpgradeRequiredMessage": "वर्तमान में स्थापित SQLite संस्करण {0} अब समर्थित नहीं है। कृपया SQLite को कम से कम संस्करण {1} में अपग्रेड करें।",
+    "showCinemaReleaseHelpText": "पोस्टर के तहत सिनेमा रिलीज की तारीख दिखाएं",
+    "NoCinemaRelease": "कोई सिनेमा रिलीज़ नहीं",
+    "ReleaseDate": "रिलीज़ करने की तिथि",
+    "ShowCinemaRelease": "सिनेमा रिलीज की तारीख दिखाएँ",
+    "ShowReleaseDate": "रिलीज की तारीख दिखाएँ",
+    "ShowReleaseDateHelpText": "पोस्टर के तहत रिलीज की तारीख दिखाएं",
+    "OnMovieDelete": "मूवी डिलीट पर",
+    "OnMovieDeleteHelpText": "मूवी डिलीट पर",
+    "OnMovieFileDelete": "मूवी फ़ाइल डिलीट पर",
+    "OnMovieFileDeleteHelpText": "मूवी फ़ाइल डिलीट पर",
+    "OnMovieFileDeleteForUpgrade": "अपग्रेड के लिए मूवी फ़ाइल हटाएं",
+    "OnMovieFileDeleteForUpgradeHelpText": "अपग्रेड के लिए मूवी फ़ाइल हटाएं",
+    "OnUpgrade": "अपग्रेड पर",
+    "Reddit": "reddit",
+    "More": "अधिक",
+    "Download": "डाउनलोड"
 }

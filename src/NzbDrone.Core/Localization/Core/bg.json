@@ -1059,5 +1059,22 @@
     "DestinationRelativePath": "Относителен път на дестинацията",
     "DownloadClientStatusCheckSingleClientMessage": "Клиентите за изтегляне са недостъпни поради грешки: {0}",
     "Images": "Изображения",
-    "IMDb": "IMDb"
+    "IMDb": "IMDb",
+    "SqliteVersionCheckUpgradeRequiredMessage": "Понастоящем инсталираната версия на SQLite {0} вече не се поддържа. Моля, надстройте SQLite поне до версия {1}.",
+    "ShowReleaseDate": "Показване на датата на издаване",
+    "ShowReleaseDateHelpText": "Показване на датата на пускане под постер",
+    "NoCinemaRelease": "Няма издание на кино",
+    "ReleaseDate": "Дати на издаване",
+    "ShowCinemaRelease": "Показване на датата на излизане на киното",
+    "showCinemaReleaseHelpText": "Покажете датата на излизане на киното под плакат",
+    "OnMovieDelete": "На Изтриване на филм",
+    "OnMovieDeleteHelpText": "На Изтриване на филм",
+    "OnMovieFileDelete": "В Изтриване на файл с филм",
+    "OnMovieFileDeleteHelpText": "В Изтриване на файл с филм",
+    "OnMovieFileDeleteForUpgrade": "Във филмов файл Изтриване за надстройка",
+    "OnMovieFileDeleteForUpgradeHelpText": "Във филмов файл Изтриване за надстройка",
+    "OnUpgrade": "При надстройка",
+    "Reddit": "Reddit",
+    "More": "| Повече ▼",
+    "Download": "Изтегли"
 }

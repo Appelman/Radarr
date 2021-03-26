@@ -1059,5 +1059,22 @@
     "MovieExcludedFromAutomaticAdd": "자동 추가에서 제외 된 영화",
     "ReleaseWillBeProcessedInterp": "릴리스가 {0} 처리됩니다.",
     "Search": "검색",
-    "Edit": "편집하다"
+    "Edit": "편집하다",
+    "SqliteVersionCheckUpgradeRequiredMessage": "현재 설치된 SQLite 버전 {0}은 더 이상 지원되지 않습니다. SQLite를 최소한 {1} 버전으로 업그레이드하십시오.",
+    "showCinemaReleaseHelpText": "포스터 아래에 영화 개봉일 표시",
+    "ShowReleaseDateHelpText": "포스터 아래에 출시일 표시",
+    "NoCinemaRelease": "시네마 릴리스 없음",
+    "ReleaseDate": "출시일",
+    "ShowCinemaRelease": "영화 개봉일 표시",
+    "ShowReleaseDate": "출시일 표시",
+    "OnMovieFileDeleteForUpgrade": "영화 파일에서 업그레이드를 위해 삭제",
+    "OnMovieFileDeleteForUpgradeHelpText": "영화 파일에서 업그레이드를 위해 삭제",
+    "OnUpgrade": "업그레이드시",
+    "OnMovieDelete": "영화 삭제시",
+    "OnMovieDeleteHelpText": "영화 삭제시",
+    "OnMovieFileDelete": "영화 파일 삭제",
+    "OnMovieFileDeleteHelpText": "영화 파일 삭제",
+    "Reddit": "레딧",
+    "More": "더",
+    "Download": "다운로드"
 }
